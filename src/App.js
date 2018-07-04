@@ -1,19 +1,39 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
+import { Flex, Button } from 'antd-mobile';
+import './App.css'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <div className="flex-container">
+            <Flex style={{height: "100%"}} direction="column">
+                <Flex style={{flex: 1}}>
+                    <div>
+                        <h1 style={{color: "#FFF"}}>Web.IM</h1>
+                        <span style={{color: "#FFF"}}>开启全新聊天体验</span>
+                    </div>
+                </Flex>
+                <Flex style={{flex: 1}}>
+                    <Flex.Item>
+                        <Link to="/register/account">
+                            <Button
+                                inline
+                                type="ghost"
+                                size="small"
+                                style={{
+                                    color: "#FFF",
+                                    backgroundColor: "#3A6774"
+                                }} inline>注册</Button>
+                        </Link>
+
+                    </Flex.Item>
+                    <Flex.Item>
+                        <Button inline type="ghost" size="small" style={{color: "#FFF", backgroundColor: "#1D1E22"}} inline>登录</Button>
+                    </Flex.Item>
+                </Flex>
+            </Flex>
+        </div>
     );
   }
 }
