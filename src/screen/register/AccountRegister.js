@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import { Flex, Button, InputItem, List, WhiteSpace, NavBar, Icon } from 'antd-mobile';
-import { withRouter, Link } from 'react-router-dom';
+import {Button, Flex, Icon, InputItem, List, NavBar} from 'antd-mobile';
+import {Link, withRouter} from 'react-router-dom';
 import '../../App.css';
+
 class AccountRegister extends Component {
     render() {
         const { history } = this.props;
@@ -13,6 +14,13 @@ class AccountRegister extends Component {
                     onLeftClick={() => history.push("/")}
                 >用户注册</NavBar>
                 <Flex style={{height: "100%"}} direction="column">
+                    <Flex style={{flex: 1}}>
+                        <div>
+                            <h1 style={{color: "#3A6774"}}>Web.IM</h1>
+                            <span style={{color: "#3A6774"}}>开启全新聊天体验</span>
+
+                        </div>
+                    </Flex>
                     <Flex style={{flex: 1, justifyContent: "flex-end", flexDirection: "column", paddingBottom: 40}}>
                         <List renderHeader={() => {
                             return (
@@ -36,10 +44,11 @@ class AccountRegister extends Component {
                                 style={{
                                     color: "#FFF",
                                     width: 310,
-                                    height: 30,
+                                    height: 36,
+                                    fontSize: 16,
+                                    paddingTop: 2,
                                     backgroundColor: "#3A6774"
-                                }}>注册
-                            </Button>
+                                }}>注册</Button>
 
                         </div>
                         <Link

@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import {Button, Flex, Icon, InputItem, List, NavBar} from 'antd-mobile';
-import {Link, withRouter} from 'react-router-dom';
+import { Flex, Button, InputItem, List, WhiteSpace, NavBar, Icon } from 'antd-mobile';
+import { withRouter, Link } from 'react-router-dom';
 import '../../App.css';
-
-class PhoneRegister extends Component {
+class PhoneLogin extends Component {
     render() {
         const { history } = this.props;
         return (
@@ -12,7 +11,7 @@ class PhoneRegister extends Component {
                     mode="light"
                     icon={<Icon type="left" />}
                     onLeftClick={() => history.push("/")}
-                >用户注册</NavBar>
+                >用户登录</NavBar>
                 <Flex style={{height: "100%"}} direction="column">
                     <Flex style={{flex: 1}}>
                         <div>
@@ -26,12 +25,11 @@ class PhoneRegister extends Component {
                         <List renderHeader={() => {
                             return (
                                 <div>
-                                    新用户注册
+                                    手机号登录
                                 </div>
                             );
                         }}>
                             <InputItem>手机号</InputItem>
-                            <InputItem>密码</InputItem>
                             <InputItem>验证码</InputItem>
                         </List>
 
@@ -39,6 +37,9 @@ class PhoneRegister extends Component {
                     <Flex style={{flex: 1, alignItems: "flex-start"}} direction="column">
                         <div>
                             <Button
+                                onClick = {() => {
+                                    history.push("/main")
+                                }}
                                 inline
                                 type="primary"
                                 size="small"
@@ -49,7 +50,7 @@ class PhoneRegister extends Component {
                                     fontSize: 16,
                                     paddingTop: 2,
                                     backgroundColor: "#3A6774"
-                                }}>注册
+                                }}>登录
                             </Button>
                         </div>
                         <Link
@@ -58,7 +59,7 @@ class PhoneRegister extends Component {
                                 marginTop: 4,
                                 fontSize: 12
                             }}
-                            to="/register/account">使用账号密码注册</Link>
+                            to="/login/account">使用账号密码登录</Link>
                     </Flex>
                 </Flex>
             </div>
@@ -66,4 +67,4 @@ class PhoneRegister extends Component {
     }
 }
 
-export default withRouter(PhoneRegister);
+export default withRouter(PhoneLogin);

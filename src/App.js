@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
-import { Flex, Button } from 'antd-mobile';
+import {Link} from 'react-router-dom';
+import {Button, Flex} from 'antd-mobile';
 import './App.css'
 
 class App extends Component {
@@ -29,7 +29,16 @@ class App extends Component {
 
                     </Flex.Item>
                     <Flex.Item>
-                        <Button inline type="ghost" size="small" style={{color: "#FFF", backgroundColor: "#1D1E22"}} inline>登录</Button>
+                        <Link to="/login/account">
+                            <Button
+                                inline
+                                type="ghost"
+                                size="small"
+                                style={{
+                                    color: "#FFF",
+                                    backgroundColor: "#1D1E22"
+                                }} inline>登录</Button>
+                        </Link>
                     </Flex.Item>
                 </Flex>
             </Flex>
