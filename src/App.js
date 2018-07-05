@@ -17,7 +17,6 @@ class App extends Component {
                 <Flex style={{flex: 1}}>
                     <Flex.Item>
                         <Link
-                            tag="div"
                             to="/register/account">
                             <Button
                                 inline
@@ -25,8 +24,10 @@ class App extends Component {
                                 size="small"
                                 style={{
                                     color: "#FFF",
-                                    backgroundColor: "#3A6774"
-                                }} inline>注册</Button>
+                                    backgroundColor: "#3A6774",
+                                    borderWidth: 0.5,
+                                    borderStyle: "solid"
+                                }}>注册</Button>
                         </Link>
 
                     </Flex.Item>
@@ -39,7 +40,9 @@ class App extends Component {
                                 size="small"
                                 style={{
                                     color: "#FFF",
-                                    backgroundColor: "#1D1E22"
+                                    backgroundColor: "#1D1E22",
+                                    borderWidth: 0.5,
+                                    borderStyle: "solid"
                                 }} inline>登录</Button>
                         </Link>
                     </Flex.Item>
