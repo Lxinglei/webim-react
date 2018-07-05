@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import { Flex, Button, InputItem, List, WhiteSpace, NavBar, Icon } from 'antd-mobile';
-import { withRouter, Link } from 'react-router-dom';
-import '../../App.css';
+import {Button, Flex, Icon, InputItem, List, NavBar} from 'antd-mobile';
+import {Link, withRouter} from 'react-router-dom';
+import '../../App.less';
+
 class PhoneLogin extends Component {
     render() {
         const { history } = this.props;

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Flex, Icon, InputItem, List, NavBar} from 'antd-mobile';
 import {Link, withRouter} from 'react-router-dom';
-import '../../App.css';
+import '../../App.less';
 
 class PhoneRegister extends Component {
     render() {

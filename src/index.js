@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-
-import './index.css';
+import './index.less';
 import App from './App';
 import AccountRegister from './screen/register/AccountRegister';
 import registerServiceWorker from './registerServiceWorker';

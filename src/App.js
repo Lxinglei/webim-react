@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import {Button, Flex} from 'antd-mobile';
-import './App.css'
+import './App.less'
 
 class App extends Component {
   render() {
@@ -16,7 +16,9 @@ class App extends Component {
                 </Flex>
                 <Flex style={{flex: 1}}>
                     <Flex.Item>
-                        <Link to="/register/account">
+                        <Link
+                            tag="div"
+                            to="/register/account">
                             <Button
                                 inline
                                 type="ghost"
@@ -29,7 +31,8 @@ class App extends Component {
 
                     </Flex.Item>
                     <Flex.Item>
-                        <Link to="/login/account">
+                        <Link
+                            to="/login/account">
                             <Button
                                 inline
                                 type="ghost"
